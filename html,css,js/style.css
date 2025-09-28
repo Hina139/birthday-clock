@@ -1,0 +1,100 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-origin: border-box;
+}
+#main-container{
+  
+position: absolute;
+    background-image:url('360_F_697317857_AAngmH6jeqQj2N5tGCXDjP7BcQFvIffd.jpg');
+    color:#0A0A0A;
+    background-repeat: no-repeat;
+    background-size: cover;
+      height: 100vh;
+    width:100%;
+    color:blanchedalmond;
+
+    
+}
+#clock h1{
+ font-size: 3rem;
+   position: absolute;
+   top:30%;
+   left:40%;
+   text-shadow: 2px 2px 8px #f79f9f;
+}
+#time {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 39%;
+  border-radius: 20px;
+  width: 26rem;
+  height: 7rem;
+  font-size: 4rem;
+  color: #fff;
+  box-shadow: 5px 3px 10px #5b5b59;
+  background: linear-gradient(90deg, #d4af37 0%, #e7cc8b 30%, #000000 100%);
+  z-index: 1;
+  overflow: hidden;
+  backdrop-filter: blur(40px);
+}
+
+
+#time::before {
+  content: "";
+  position: absolute;
+  inset: -3px; 
+  border-radius: 23px;
+  background: linear-gradient(
+    270deg,
+    #d4af37,
+    #e7cc8b,
+    #000000,
+    #d4af37
+  );
+  background-size: 300% 300%;
+  z-index: -1; 
+  animation: borderMove 6s linear infinite;
+}
+#time span {
+  position: relative;  
+  display: inline-block;
+  margin: 0 6px;        }
+
+
+#time span::after {
+  position: absolute;
+  bottom: -14px;  
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #fff;
+  z-index: 2;
+}
+
+
+#hrs::after {
+  content: "hrs";
+}
+#mins::after {
+  content: "mins";
+}
+#secs::after {
+  content: "secs";
+}
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
